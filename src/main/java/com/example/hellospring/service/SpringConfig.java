@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 //--- Java Bean을 수동으로 등록
 @Configuration
 public class SpringConfig {
-
+//
 //    @Bean
 //    public MemberService memberService() {
 //        return new MemberService(memberRepository());

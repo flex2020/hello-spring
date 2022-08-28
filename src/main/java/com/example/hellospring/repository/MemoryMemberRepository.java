@@ -15,6 +15,7 @@ public class MemoryMemberRepository implements MemberRepository {
     public Member save(Member member) {
         member.setId(++sequence); // member의 id값 설정
         store.put(member.getId(), member); // id와 member를 store(해쉬맵)에 저장
+        System.out.println("save : " + member.getName());
         return member;
     }
 

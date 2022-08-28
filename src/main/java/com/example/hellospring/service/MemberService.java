@@ -14,14 +14,14 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     @Autowired
-    public MemberService(MemberRepository memberRepository) {
+    public MemberService(MemoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
     //--- 회원가입
     public Long join(Member member) {
         validateDuplicateMember(member); // 중복 확인
 
-
+        System.out.println("join : " + member.getName());
         memberRepository.save(member);
         return member.getId();
     }
